@@ -3,13 +3,13 @@ void Hanoi(int n, char from, char mid, char to) //參考劉逸筆記
 {
 	if(n == 1)
 	{
-		printf("從%d到%d\n", from, to);
+		printf("從%c到%c\n", from, to);
 		return;
 	}
 	else
 	{
 		Hanoi(n-1, from, to, mid); //(1)將 2 個較小的盤子從 A 移到 B， C 作為mid
-		printf("從%d到%d\n", from, to); //(2)印出移動最大的盤子從 A 移動到 C 的步驟
+		printf("從%c到%c\n", from, to); //(2)印出移動最大的盤子從 A 移動到 C 的步驟
 		Hanoi(n-1, mid, from, to); //(3)將之前移到 B 的 2 個盤子從 B 移動到 C
 	}
 } 
