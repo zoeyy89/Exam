@@ -15,7 +15,7 @@ void insert(Node * x, Node * y)//x的後面加入y
 	//記得： 右上左上右下左下
 	y -> Rlink = x -> Rlink;
 	y -> Llink = x;
-    (x -> Rlink) -> Llink = y;	//這行極度重要!
+        (x -> Rlink) -> Llink = y;	//這行極度重要!
 	x -> Rlink = y;
 }
 
