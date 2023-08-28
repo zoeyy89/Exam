@@ -5,9 +5,9 @@ using namespace std;
 class Node
 {
     public:
-		int data;
-		Node * Llink; //ADT抽象化概念，*是pointer
-		Node * Rlink;
+	    int data;
+	    Node * Llink; //ADT抽象化概念，*是pointer
+	    Node * Rlink;
 };
 
 void insert(Node * x, Node * y)//x的後面加入y
@@ -47,7 +47,7 @@ int main()
 	cout << b->Llink <<" " << b->data <<" " << b -> Rlink << endl;
 	cout << c->Llink <<" " << c->data <<" " << c -> Rlink << endl;
 
-	delete a;
+    delete a;
     delete b;
     delete c;
 	return 0;
