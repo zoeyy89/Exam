@@ -50,6 +50,5 @@ int main()
 	delete a;
     delete b;
     delete c;
-	
 	return 0;
 }
