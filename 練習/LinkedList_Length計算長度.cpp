@@ -6,8 +6,8 @@ using namespace std;
 class Node
 {
     public:
-		int data;
-		Node* link; //ADT抽象化概念，*是pointer
+        int data;
+        Node* link; //ADT抽象化概念，*是pointer
 };
 
 int SLength(Node * s)
