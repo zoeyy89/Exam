@@ -46,5 +46,10 @@ int main()
 	cout << a->Llink <<" " << a->data <<" " << a -> Rlink << endl;
 	cout << b->Llink <<" " << b->data <<" " << b -> Rlink << endl;
 	cout << c->Llink <<" " << c->data <<" " << c -> Rlink << endl;
+
+	delete a;
+    delete b;
+    delete c;
+	
 	return 0;
 }
