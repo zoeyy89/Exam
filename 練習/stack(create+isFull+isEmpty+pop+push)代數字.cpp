@@ -64,14 +64,14 @@ bool pop(int item)
 int main() {
     create(5);
     isEmpty();
-	isFull();
-	push(10);
-	push(20);
-	push(30);
-	push(40);
-	push(50);
-	push(60);
-	pop(0);
-	return 0;
+    isFull();
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    push(60);
+    pop(0);
+    return 0;
 
 }
