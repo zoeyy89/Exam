@@ -1,5 +1,5 @@
 //Binary search(recursive)
-//O(n)
+//O(log n)
 //找中間切下去
 #include <iostream>
 #include <algorithm>
