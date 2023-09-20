@@ -5,17 +5,17 @@
 #include <algorithm>
 
 using namespace std;
-int bs(int F[], int k, int l, int u) //F為array, k為欲找值//最左下限l, 最右上限u
+int binarySearch(int F[], int key, int l, int u) //F為array, k為欲找值//最左下限l, 最右上限u
 {
 	if (l <= u)
 	{
 		int mid = (l + u)/2;
-	    if (F[mid] == k)
+	    if (F[mid] == key)
 			return mid;
-		else if (F[mid] > k) //k比中央點小
-			return bs(F, k, l, mid - 1); //upper變成mid-1
+		else if (F[mid] > key) //k比中央點小
+			return binarySearch(F, key, l, mid - 1); //upper變成mid-1
 		else //k比中央點大
-			return bs(F, k , mid + 1, u); //lower變成mid+1
+			return binarySearch(F, key, mid + 1, u); //lower變成mid+1
 	}
 	else
 		return -1; // not found
@@ -25,6 +25,6 @@ int main() {
 	int size = sizeof(array1)/sizeof(array1[0]);	
 	//sort (first, last) 	對[first, last)範圍內的元素排序
 	sort(array1, array1 + size);
-    cout << bs(array1, 30, 0, size);
+    cout << binarySearch(array1, 30, 0, size);
 	return 0;
 }
