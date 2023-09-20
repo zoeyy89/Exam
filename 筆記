@@ -1,1 +1,10 @@
+sort
 
+初等: insertion  bubble  selection  shall
+平均O(n^2)
+
+高等: quick  heap  merge
+平均O(nlog n)
+
+線性: radix  counting
+平均O(n) 
