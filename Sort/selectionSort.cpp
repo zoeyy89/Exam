@@ -18,6 +18,7 @@ void selectionSort(int* data, int size)
 		}
 		if (i != min) 
 		    swap(data[i], data[min]);
+            //if (i != min)可不寫，寫了在第一個判斷可少一次自己和自己換，但多一個if，各有利弊
 	}
 }
 int main()
