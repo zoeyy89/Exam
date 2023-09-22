@@ -1,3 +1,4 @@
+//merge sort
 #include <iostream>
 using namespace std;
 
@@ -17,7 +18,7 @@ void merge(int data[], int l, int mid, int r)
 
     // 合併兩個子陣列為一個已排序的陣列
     while (i < n1 && j < n2)
-	{
+    {
         if (L[i] <= R[j])
             data[k++] = L[i++];
         else 
@@ -31,8 +32,10 @@ void merge(int data[], int l, int mid, int r)
         data[k++] = R[j++];
 }
 
-void mergeSort(int data[], int l, int r) {
-    if (l < r) {
+void mergeSort(int data[], int l, int r) 
+{
+    if (l < r) 
+    {
         int mid = l + (r - l) / 2;
         mergeSort(data, l, mid); // 遞迴排序左半和右半
         mergeSort(data, mid + 1, r);       
@@ -40,7 +43,8 @@ void mergeSort(int data[], int l, int r) {
     }
 }
 
-int main() {
+int main()
+{
     int data[] = {26, 5, 37, 1, 61, 11, 59, 15, 48, 19};
     int n = sizeof(data) / sizeof(data[0]);
     mergeSort(data, 0, n - 1);
