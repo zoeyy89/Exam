@@ -6,14 +6,14 @@ class Node
 {
     public:
 		int data;
-		Node * Lchild;
-		Node * Rchild;
-}
+		Node* Lchild;
+		Node* Rchild;
+};
 
 Node* Copy(Node* old)
 {
-	Node *t = new Node(); //新建節點t
-	if (old != null)
+	Node* t = new Node(); //新建節點t
+	if (old != nullptr)
 	{
 		t -> data = old -> data;
 		t -> Lchild = Copy(old -> Lchild);
@@ -23,7 +23,6 @@ Node* Copy(Node* old)
 	    t = nullptr;
 		
 	return t;
-    cout >> copy >> endl;
 }
 
 int main()
@@ -34,9 +33,31 @@ int main()
 	old -> data = 3;
 	old -> Lchild = b;
 	old -> Rchild = nullptr;
-	b -> data = nullptr;
+	b -> data = 7;
 	b -> Lchild = nullptr;
 	b -> Rchild = nullptr;
+
+	Node* new_node = new Node();
+	new_node = Copy(old);
 	
+	cout << "new_node's data:" << new_node -> data << " " ;
+	if (new_node->Lchild)
+    {
+        cout << " L: " << new_node -> Lchild -> data << " ";
+    }
+    else
+    {
+        cout << " L: Null";
+    }
+
+    if (new_node -> Rchild)
+    {
+        cout << " R: " << new_node -> Rchild -> data;
+    }
+    else
+    {
+        cout << " R: Null";
+    }
+
 	return 0;
 }
