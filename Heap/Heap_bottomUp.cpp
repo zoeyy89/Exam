@@ -37,7 +37,7 @@ void insertNode(int arr[], int& n, int Key)
 
 void printArray(int arr[], int n)
 {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 }
 
