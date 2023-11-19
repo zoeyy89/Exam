@@ -19,7 +19,7 @@ int main()
     for (int i = 0; i < 5; i++)
         for (int j = 0; j < 5; j++)
             if (i == j)
-                sum += table[i][j] + table[4-j][i];
+                sum += table[i][j] + table[i][4 - j];
     sum -= table[2][2];
     cout << sum << endl;
 }
