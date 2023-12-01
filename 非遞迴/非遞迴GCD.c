@@ -16,9 +16,9 @@ int GCD(int a, int b)
 	        b = b % a;
     }
     if (a == 0)
-	return b;
+	    return b;
     else 
-	return a;
+	    return a;
 
 }
 int main()
