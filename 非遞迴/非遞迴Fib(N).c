@@ -1,27 +1,17 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int Fib(int N);
-int main()
+int Fib(int n)
 {
-    int num;
-    
-    scanf("%d", &num); //input int = 3
-    printf("%d", Fib(num));
-    return 0;
-}
- 
-int Fib(int N)
-{
-    if (N == 0)
+    if (n == 0)
         return 0;
-    else if(N == 1)
+    else if(n == 1)
         return 1;
     else
     {
+		int a = 0, b = 1;
 		int c;
-		int a = 0;
-		int b = 1;
-    	for (int i = 2; i <= N; i++)
+    	for (int i = 2; i <= n; i++)
     	{
         	c = a + b;
         	a = b;
@@ -30,4 +20,9 @@ int Fib(int N)
     	return c;   	
   	}
 }
- 
+
+int main()
+{
+	cout << "F[5]:" << Fib(5) << endl;
+	cout << "F[8]:" << Fib(8) << endl;
+}
