@@ -17,7 +17,8 @@ void quickSort(int* data, int l, int r)
 				swap(data[i], data[j]);
 		}
 		while (i < j);
-		swap(data[l], data[j]);
+		swap(data[l], data[j]); //l 和 j 交換的本質：因為i原本在左，j在右，那i、j交錯時，也等於j快接近i原先出發的大小
+		                        //因此和j換而非i
 		quickSort(data, l, j - 1); //對左QS
 		quickSort(data, j + 1, r); //對右QS
 	}
